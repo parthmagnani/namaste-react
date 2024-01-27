@@ -89,3 +89,26 @@ config driven UI means our UI will be based on what data we have or what data ge
 14. while looping an array into jsx we use key keyword in which there will be unique ID
 
 15. This key keyword is used because when react rerender the component it will just re render the particular array element which is new or we can say that in which element it find new unique ID, by this our app is optimized  
+
+# Chapter-5
+1. In this chapter we have structured our app as initially al the the components were in App.js
+
+2. But now we have created src folder > components folder > where all the componenets will be there 
+
+3. There is no such hard flow to structure our app but there are two practices which are used in industry
+
+4. First is either you structure your app module wise like components related to registration will be in registration folder and components related to feeds will be Feeds folder and so on
+
+5. Second is keep the same file in same folder like all the components will be in components folder, all the common things will be in common folder and so on
+
+6. There are two types of export and import, default and named
+
+7. when we have export default something from file/component we use default export but if we have to export multiple variables.function from single file mostly we use name export
+
+8. In part two we have learnt about Hooks. In this mainly we have learnt about useState Hook
+
+9. useState Hook is use to maintain the state of the component. It is used to create state varianble
+
+10. Also we have learnt about reconciliation algorith(React Fible) which is used by React for rendering
+
+11. In this there is a virtual DOM (objectal representation of an actual DOM) so when data gets updated new virtual DOM is created now with the help of Differential algorithm it finds out what are new changes and accordingly updated the actual DOM

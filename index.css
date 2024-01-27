@@ -83,3 +83,8 @@
     flex-wrap: wrap;
     gap: 15;
 }
+
+.top-res-btn{
+    margin: 10px 5px; 
+    cursor: pointer;
+}
