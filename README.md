@@ -112,3 +112,18 @@ config driven UI means our UI will be based on what data we have or what data ge
 10. Also we have learnt about reconciliation algorith(React Fible) which is used by React for rendering
 
 11. In this there is a virtual DOM (objectal representation of an actual DOM) so when data gets updated new virtual DOM is created now with the help of Differential algorithm it finds out what are new changes and accordingly updated the actual DOM
+
+# chapter-6
+1. we have learnt about Monolithic and Microservices Architecture
+
+2. In a monolithic architecture, the entire application is developed as a single unit. All the components of the application, including the user interface, business logic, and data access layers, are tightly integrated and deployed as a single unit.
+
+3. Microservices architecture is an approach to software development where an application is composed of loosely coupled, independently deployable services. Each service is responsible for a specific business function and communicates with other services through well-defined APIs.
+
+4. There are two ways to loads apis or to render component
+
+5. First we load then we call api and at last we render our page and second is first we load , then we render, then we call api and at last we rerender our component. So best practise is second approach as in first case our UI will stock untill we don't get reponse from backend/api
+
+5. We learnt about one more important hook, useEffect()
+
+6. It executes at the end, it means after the rendering of the jsx it will get execute. Mostly used to call APIs 
