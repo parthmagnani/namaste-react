@@ -126,4 +126,29 @@ config driven UI means our UI will be based on what data we have or what data ge
 
 5. We learnt about one more important hook, useEffect()
 
-6. It executes at the end, it means after the rendering of the jsx it will get execute. Mostly used to call APIs 
+6. It executes at the end, it means after the rendering of the jsx it will get execute. Mostly used to call APIs.
+
+# chapter-7
+1. In this chapter we have learnt more about useEffect Hook
+
+2. This hook take two parameters, callBack function and dependency array
+
+3. This hook called after every component render cycle i.e, Whenever component gets render this useEffect will get execute.
+
+4. But if in second parameter we pass an empty array it will only get execute on initial rendering
+
+5. Also, if we pass something, mostly state variable, in dependency array so it will execute everytime when the value of that state variable gets change   
+
+6. In part part 2 we have learnt about routing. For routing we are using library react-router-dom
+
+7. first we create configuration for routing with the help of createBrowserRouter
+
+8. After creating configuration we will provide this configuration to root.render with the help of RouterProvider
+
+9. we can also show error page if route is not defined by providing errorElement in routing configuration.
+
+10. As children route is also define by just using key children in parent object and it is also list of object containing path and element.
+
+11. Dynamic routing is done by /:id, so after (:) will be dynamic
+
+12. To get this is in component we can take use of useParams hook 
