@@ -152,3 +152,8 @@ config driven UI means our UI will be based on what data we have or what data ge
 11. Dynamic routing is done by /:id, so after (:) will be dynamic
 
 12. To get this is in component we can take use of useParams hook 
+
+# chapter-7
+1. In this chapter we learnt about how we create class base component. Just like how we create class, like that only we can create class base component. UserClass is an example of class base component
+
+2. To use props which have been pass to class base component it can be used using constructor and using super like done in UserClass component. 

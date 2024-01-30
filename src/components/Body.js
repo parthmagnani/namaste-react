@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Shimmer from './Shimmer'
 import { useNavigate } from 'react-router-dom'
 
+
 const Body = () => {
 
     const navigate = useNavigate()
@@ -34,6 +35,7 @@ const Body = () => {
 
     return listOfRestaurants.length ? (
         <div className='body-container'>
+            
             <div className='body-header'>
                 <div>
                     <input type="text" onChange={(e) => setSearchedValue(e.target.value)} value={searchedValue} />
