@@ -153,7 +153,13 @@ config driven UI means our UI will be based on what data we have or what data ge
 
 12. To get this is in component we can take use of useParams hook 
 
-# chapter-7
+# chapter-8
 1. In this chapter we learnt about how we create class base component. Just like how we create class, like that only we can create class base component. UserClass is an example of class base component
 
 2. To use props which have been pass to class base component it can be used using constructor and using super like done in UserClass component. 
+
+3. we can also create state varible in class component by this.sate and this will be objects and its key will be variable name and its value will be the initial value of that variable.
+
+4. To update state varible react provide one method setState
+
+5. Whenever class base component gets mounted its instance is created, so initially constructor get called and then render methods gets called and at last, after out component gets render one more method is called which is componentDidMount(), it is just like useEffect().  
