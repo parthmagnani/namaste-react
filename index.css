@@ -106,3 +106,9 @@
     gap: 5;
     align-items: center;
 }
+
+.github_url{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}

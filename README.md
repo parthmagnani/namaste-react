@@ -162,4 +162,20 @@ config driven UI means our UI will be based on what data we have or what data ge
 
 4. To update state varible react provide one method setState
 
-5. Whenever class base component gets mounted its instance is created, so initially constructor get called and then render methods gets called and at last, after out component gets render one more method is called which is componentDidMount(), it is just like useEffect().  
+5. Whenever class base component gets mounted its instance is created, so initially constructor get called and then render methods gets called and at last, after out component gets render one more method is called which is componentDidMount().
+
+6. when we use same class base component twice, it will create two differnt instances.
+
+7. In react lifecycle, there are two phases, render phase and commit phase
+
+8. Important point is that, for all component first render phase gets completed and then commit phase
+
+9. Render phase - In this phase react use its diff algorithm, creating its virtual DOM,  or we can say that preparing data which has to show and that data is just object.
+
+10. Now after render phase, commit phase comes into picture, in which DOM manipulation or DOM updating is done, according our data is created, that has to fit in our DOM tree.
+
+11. so while mounting component in render phase counstructor and render methods gets called and in commit phase DOM update and componentDidMount get called.
+
+12. so If we update our component, by changing value of state variable it means we are make some changes or we can say that we are updating our component, so while updating just render method called in render phase but in commit phase DOM updating and componentDidUpdate get called.
+
+13. And last when component is unmounted it means if navigating from one component to another, just componentWillUnmount() method will get call. So this is all about react lifecycle 
