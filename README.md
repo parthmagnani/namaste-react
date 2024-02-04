@@ -200,3 +200,6 @@ config driven UI means our UI will be based on what data we have or what data ge
 9. To acheive lazy loading , where the routes are defined we have to import lazy and Suspense from react
 
 10. suspense is used for showing dummy screen i.e, untill our components load to show shimmer we can use this but the main purpose of using this is untill component gets load for that period of time react starting rendering that component but there is no such file and it will throw error. To overcome this error Suspense is been used.
+
+# chapter-10
+1. In this chapter we learnt CSS framework, tailwind 
