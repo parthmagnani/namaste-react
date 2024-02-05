@@ -1,4 +1,4 @@
-import RestaurantCard from './RestaurantCard';
+import RestaurantCard, { promotedRestaurantCard } from './RestaurantCard';
 import { useEffect, useState } from 'react';
 import Shimmer from './Shimmer';
 import { useNavigate } from 'react-router-dom';
@@ -10,10 +10,17 @@ const Body = () => {
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [searchedValue, setSearchedValue] = useState("");
     const listOfRestaurants = useRestaurantList();
+
+    const PromotedComponent = promotedRestaurantCard(RestaurantCard)
     
     useEffect(() => {
+        console.log("listOfRestaurants-->>", listOfRestaurants)
         setFilteredRestaurants(listOfRestaurants);
     }, [listOfRestaurants]);
+
+    useEffect(() => {
+            console.log("filteredRestaurants-->>", filteredRestaurants)
+    }, [filteredRestaurants])
 
     const filterTopRestaurants = () => {
         setFilteredRestaurants(listOfRestaurants.filter(item => item.info.avgRating > 4.5));
@@ -25,7 +32,7 @@ const Body = () => {
 
     return (
         <>
-            {listOfRestaurants?.length ? (
+            {filteredRestaurants?.length ? (
                 <div className="p-2">
                     <div className='flex flex-col sm:flex-row items-center justify-between mb-6'>
                         <div className="mb-4 sm:mb-0">
@@ -42,8 +49,11 @@ const Body = () => {
                     </div>
                     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
                         {filteredRestaurants.map(restaurants => (
-                            <div key={restaurants.info.id} onClick={() => { console.log(restaurants.info.id); navigate(`/restaurants/${restaurants.info.id}`) }}>
-                                <RestaurantCard resData={restaurants.info} />
+                            <div className='relative' key={restaurants.info.id} onClick={() => { navigate(`/restaurants/${restaurants.info.id}`) }}>
+                                {
+                                    restaurants.info.aggregatedDiscountInfoV3 ? <PromotedComponent resData={restaurants.info} />: <RestaurantCard resData={restaurants.info} />
+                                }
+                                
                             </div>
                         ))}
                     </div>
