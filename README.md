@@ -210,3 +210,20 @@ config driven UI means our UI will be based on what data we have or what data ge
 2. In this app to show offers on particular restaurants we have used higher order components for them.
 
 3. Controlled components are those componets which are controlled by its parent component and uncontrolled components are component which are independent.
+
+4. prop drilling - passing props from one component from one to component to other from other to another and so on, like if we are passing prop from parent to its leaf(4-5th child) component, its called prop drilling
+
+5. As there are drawbacks of these, If we want some state varible or any variable from parent to 4-5 th child we have to pass it through
+all the child component, unnecessarily. 
+
+6. To avoid these we use useContext hook. Basically useContext is used to manage data locally. or we can say that we will be creating  store where we will be saving data which can be accessible to whole app.
+
+7. we are creating store where, there will be data saved of user, like name of the user or we can also say we are creating USerContext where these user data will get saved. Mostly these context are in utils folder
+
+8. To create context we can use createContext, which is provided by react.
+
+9. Now to use this these data of context we will use useContext hook. const data = useContext(context-name)
+
+10. In class base component as we cannot use hooks, so to access data of context we can use Consumer.
+
+11. To update that data we can use provider like we have used in App.js <UserContext.Provider></UserContext.Provider>

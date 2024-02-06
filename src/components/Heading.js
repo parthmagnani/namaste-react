@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 
 const Heading = () => {
     const [btn, setBtn] = useState("Login");
+
+    const {loggedInUser } = useContext(UserContext)
+
 
     return (
         <div className="p-2 flex flex-col sm:flex-row justify-between h-auto sm:h-20 bg-pink-200 shadow-lg mb-4">
@@ -22,6 +26,9 @@ const Heading = () => {
                     </li>
                     <li className="px-5 text-lg">
                         <Link to="/">Cart</Link>
+                    </li>
+                    <li className="px-5 text-lg">
+                        <Link to="/">{loggedInUser}</Link>
                     </li>
                 </ul>
                 <button className="bg-blue-200 rounded px-4 py-2 mt-4 sm:mt-0 ml-0 sm:ml-4" onClick={() => setBtn(btn === 'Login' ? 'Logout' : 'Login')}>{btn}</button>

@@ -14,12 +14,10 @@ const Body = () => {
     const PromotedComponent = promotedRestaurantCard(RestaurantCard)
     
     useEffect(() => {
-        console.log("listOfRestaurants-->>", listOfRestaurants)
         setFilteredRestaurants(listOfRestaurants);
     }, [listOfRestaurants]);
 
     useEffect(() => {
-            console.log("filteredRestaurants-->>", filteredRestaurants)
     }, [filteredRestaurants])
 
     const filterTopRestaurants = () => {

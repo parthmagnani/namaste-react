@@ -2,7 +2,7 @@ import { RES_IMG_URL } from '../utils/constant'
 
 const RestaurantCard = (props) => {
     const { resData } = props
-    console.log("resData", resData)
+    
     return (
         <div className='cursor-pointer mb-3 '>
 
