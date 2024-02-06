@@ -205,6 +205,8 @@ config driven UI means our UI will be based on what data we have or what data ge
 1. In this chapter we learnt CSS framework, tailwind 
 
 # chapter-11
-1. Higher order component -> components which take parameter as component and return component are called higher order component.
+1. Higher order component -> components which take argument as component and return component are called higher order component.
 
-2. In this app to show offers on particular restaurants we have used higher order components for them
+2. In this app to show offers on particular restaurants we have used higher order components for them.
+
+3. Controlled components are those componets which are controlled by its parent component and uncontrolled components are component which are independent.

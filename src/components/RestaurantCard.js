@@ -2,9 +2,9 @@ import { RES_IMG_URL } from '../utils/constant'
 
 const RestaurantCard = (props) => {
     const { resData } = props
-
+    console.log("resData", resData)
     return (
-        <div className='cursor-pointer '>
+        <div className='cursor-pointer mb-3 '>
 
             <img className="w-full h-[200px] rounded-2xl object-cover"src={RES_IMG_URL + resData.cloudinaryImageId} alt="" />
             <div className="gradient-overlay"></div>
@@ -14,8 +14,8 @@ const RestaurantCard = (props) => {
                 <p className='text-rgba font-semibold text-[#02060cc0] mt-0 '>*</p>
                 <p className='text-rgba font-semibold text-[#02060cc0] mt-0 '>{resData.sla.deliveryTime} min</p>
             </div>
-            <p className="text-rgba-60 leading-19 font-light text-base mt-0 mb-6">{resData.cuisines.join(", ")} </p>
-            {/* <p className='res-details-two'>{resData.costForTwo}</p> */}
+            <p className="text-rgba-60 leading-5 font-light text-base mt-0 max-w-full whitespace-nowrap overflow-hidden overflow-ellipsis">{resData.cuisines.join(", ")} </p>
+            <p className='text-rgba-60 leading-5 font-light text-base mt-0 res-details-two max-w-full whitespace-nowrap overflow-hidden overflow-ellipsis'>{resData.areaName}</p>
         </div>
     )
 }
@@ -28,7 +28,7 @@ export const promotedRestaurantCard = (RestaurantCard) => {
 
         return(
             <>
-                <h4 className='text-[white] font-bold bottom-[41%] absolute text-xl left-[10px] z-10 cursor-pointer'>{resData.aggregatedDiscountInfoV3.header} {resData.aggregatedDiscountInfoV3.subHeader}</h4>
+                <h4 className='text-[white] font-bold bottom-[38%] absolute text-xl left-[10px] z-10 cursor-pointer'>{resData.aggregatedDiscountInfoV3.header} {resData.aggregatedDiscountInfoV3.subHeader}</h4>
                 <RestaurantCard {...props}/>
             </>
         )
