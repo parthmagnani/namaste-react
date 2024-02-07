@@ -227,3 +227,14 @@ all the child component, unnecessarily.
 10. In class base component as we cannot use hooks, so to access data of context we can use Consumer.
 
 11. To update that data we can use provider like we have used in App.js <UserContext.Provider></UserContext.Provider>
+
+# chapter-12
+1. In this chapter we are going to learn about state management library, which is redux, or we can say that it is also used to amanage daya layer.
+
+2. Zustand is library which is also used for state management
+
+3. As we redux we are going to install two libraries @reduxjs/toolkit and react-redux.
+
+4. we are going to build a redux store - redux store is just a big object which is kept in a central global space.
+
+5. As to simplify this object, slices are created, they are just logical partition of this redux store.

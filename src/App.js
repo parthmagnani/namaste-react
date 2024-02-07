@@ -6,6 +6,8 @@ import Error from './components/Error'
 import RestaurantMenu from './components/RestaurantMenu'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import UserContext from './utils/UserContext'
+import { Provider } from 'react-redux'
+import appStore from './utils/store/appStore'
 
 
 
@@ -24,12 +26,15 @@ const AppLayout = () => {
 
     }, [])
     return (
-        <UserContext.Provider value={{loggedInUser: userName}}>
-            <div className='app'>
-                <Heading />
-                <Outlet />
-            </div>
-        </UserContext.Provider>
+        <Provider store={appStore}>
+            <UserContext.Provider value={{ loggedInUser: userName }}>
+                <div className='app'>
+                    <Heading />
+                    <Outlet />
+                </div>
+            </UserContext.Provider>
+        </Provider>
+
 
     )
 }
