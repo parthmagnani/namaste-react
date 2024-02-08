@@ -28,7 +28,7 @@ const Heading = () => {
                         <Link to="/">Orders</Link>
                     </li>
                     <li className="px-5 text-xl font-bold">
-                        <Link to="/">Cart - ({cartItems.length} items)</Link>
+                        <Link to="Cart">Cart - ({cartItems.length} items)</Link>
                     </li>
                     <li className="px-5 text-lg">
                         <Link to="/">{loggedInUser}</Link>

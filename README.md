@@ -238,3 +238,13 @@ all the child component, unnecessarily.
 4. we are going to build a redux store - redux store is just a big object which is kept in a central global space.
 
 5. As to simplify this object, slices are created, they are just logical partition of this redux store.
+
+6. First to create redux store, we have to use configureStore which is provided by reduxToolkit in which we are going to use method reducer.
+
+7. In this reducer, there will be all reducers provided by slice.
+
+8. No to create slice we will use createSlice which is also provided by redux toolkit 
+
+9. In slice, there will be the name of that slice, initial state and reducers, in which we will write logic like add delete update etc
+
+10. IMP - in slice we use reducers and in to create store we use reducer
