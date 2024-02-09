@@ -247,4 +247,17 @@ all the child component, unnecessarily.
 
 9. In slice, there will be the name of that slice, initial state and reducers, in which we will write logic like add delete update etc
 
-10. IMP - in slice we use reducers and in to create store we use reducer
+10. IMP - in slice we use reducers and in to create store we use reducer.
+
+# chapter-13
+1. In this chapter we are going to learn about developer testing
+
+2. There are three types of testing unit testing, integration testing and end to end(e2e) testing.
+
+3. unit testing - code which test single component or which are tested in isolation
+
+4. integration testing - testing of multiple component according to our functionality, like if on clicking on button from one component and its make changes into another component so testing of both these component is type of integration component
+
+5. e2e - testing from user comes to landing page of app to closing of app(done by tester)
+
+6. To test our we are going to install @testing-library/react, jest and other dependencies and configure them accordingly
