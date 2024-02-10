@@ -260,4 +260,10 @@ all the child component, unnecessarily.
 
 5. e2e - testing from user comes to landing page of app to closing of app(done by tester)
 
-6. To test our we are going to install @testing-library/react, jest and other dependencies and configure them accordingly
+6. To test our we are going to install @testing-library/react, jest and other dependencies and configure them accordingly.
+
+7. Then jest configuration is done, using npx jest --init command
+
+8. As our test cases will not run on browser but we need broser like environment to run our application for that we will be going to install jest-environment-jsdom library
+
+9. After all the configuration to write we will create __tests__ folder and file name with .test.js so jest will understand where it has to check test cases
